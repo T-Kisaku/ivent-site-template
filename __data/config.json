@@ -1,6 +1,14 @@
 {
-    "project_name": "Tech爺",
     "company": {
-        "name": "Happy machine"
+        "name": "Happy machine",
+        "supporters": [
+        
+        ]
+    },
+    "project": {
+        "name": "Tech爺",
+        "members": [
+
+        ]
     }
 }

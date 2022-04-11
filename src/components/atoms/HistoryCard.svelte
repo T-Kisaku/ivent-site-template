@@ -1,8 +1,6 @@
 <script lang="ts">
     import { goto } from '$app/navigation';
-    import type {Metadata} from '@/src/types/history'
-
-    export let history: Metadata
+    import type {Metadata} from '@/src/t@/src/types/iventexport let history: Metadata
 </script>
 
 <div class="bg-white drop-shadow-xl" on:click={() => goto(history.path)}>

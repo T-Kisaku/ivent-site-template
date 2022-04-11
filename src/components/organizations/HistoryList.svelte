@@ -1,7 +1,6 @@
 <script lang="ts">
     import HistoryCard from "../atoms/HistoryCard.svelte";
-    import type { Metadata } from "@/src/types/history";
-    export let historyList: Metadata[]
+    import type { Metadata } from "@/src/t@/src/types/iventexport let historyList: Metadata[]
 </script>
 
 <div class="grid gap-10 grid-cols-1 sm:grid-cols-4">

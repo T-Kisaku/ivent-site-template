@@ -7,6 +7,6 @@
 
 <MetaTags
 	title="Page"
-	titleTemplate="%s | {config.project_name}"
+	titleTemplate="%s | {config.project.name}"
 />
 <Layout><slot /></Layout>
