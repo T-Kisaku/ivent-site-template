@@ -4,7 +4,7 @@
  */
 
 import vercel from '@sveltejs/adapter-vercel';
-import vitePluginString from 'vite-plugin-string';
+import viteRawPlugin from 'vite-raw-plugin'
 import { svelteSVG } from 'rollup-plugin-svelte-svg'
 
 import preprocess from 'svelte-preprocess';
@@ -23,7 +23,7 @@ const config = {
 		vite: {
 			plugins: [
 				// If you execute without default, it occure error
-				vitePluginString.default(),
+				viteRawPlugin({ fileRegex: /\.md$/ }),
 				svelteSVG({
 					// optional SVGO options
 					// pass empty object to enable defaults
