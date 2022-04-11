@@ -20,6 +20,9 @@ const config = {
 
 	kit: {
 		adapter: vercel(),
+		files: {
+			assets: '__data',
+		},
 		vite: {
 			plugins: [
 				// If you execute without default, it occure error
@@ -45,7 +48,10 @@ const config = {
 			},
 			server: {
 				fs: {
-					allow: [path.resolve('./__data') + '/*']
+					allow: [
+						path.resolve('./__data') + '/*',
+						path.resolve('./__data/config.json?import')
+					],
 				}
 			}
 		}
