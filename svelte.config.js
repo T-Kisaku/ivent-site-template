@@ -3,8 +3,7 @@
  * https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog#:~:text=and%20modify%20the%20code%20like%20so
  */
 
-import vercel from '@sveltejs/adapter-vercel';
-import staticAdapter from '@sveltejs/adapter-static'
+import netlify from '@sveltejs/adapter-netlify'
 import viteRawPlugin from 'vite-raw-plugin'
 import { svelteSVG } from 'rollup-plugin-svelte-svg'
 
@@ -20,8 +19,7 @@ const config = {
 	preprocess: [preprocess()],
 
 	kit: {
-		// adapter: vercel(),
-		adapter: staticAdapter(),
+		adapter: netlify(),
 		files: {
 			assets: '__data',
 		},
