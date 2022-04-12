@@ -7,6 +7,7 @@ export const load: Load = async ({ fetch }) => {
             response = await fetch('/api/ivents.json'),
             data: Ivent[] = await response.json()
         return {
+            status: response.status,
             props: {data}
         }
 		// return {
