@@ -9,3 +9,4 @@ node_modules
 # My configuration
 .vercel_build_output
 dist
+.netlify
