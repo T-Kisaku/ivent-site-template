@@ -1,9 +1,21 @@
+<script context="module" lang="ts">
+	import type { Load } from '@sveltejs/kit';
+
+    export const load: Load = async ({ fetch, params }) => {
+		const
+            response = await fetch('/api/config.json'),
+            config = await response.json()
+        return {
+            props: {config}
+        }
+	};
+</script>
 <script lang="ts">
     import {MetaTags} from 'svelte-meta-tags'
     import Title from '@/src/components/atoms/Title.svelte';
     import Paper from '@/src/components/atoms/Paper.svelte';
     import SnsIcon from '@/src/components/atoms/SnsIcon.svelte';
-    import config from '@/__data/config.json'
+    export let config
 </script>
 <MetaTags title="MEMBER" />
 <Title>MEMBER</Title>
