@@ -1,3 +1,8 @@
+/**
+ * このAPIはivents.json.tsとほとんど同じロジック。
+ * 違うのは28行目の比較式
+ */
+
 import type { RequestHandler } from "@sveltejs/kit";
 import type { Ivent } from "@/src/types/ivent";
 
@@ -20,7 +25,7 @@ export const get: RequestHandler = async ({ params }) => {
 			url = filePath.slice(15, -3),
 			converted = await convertMd(rawMd)
 
-		if(yesterday < new Date(converted.metadata.eventDate)){
+		if(yesterday > new Date(converted.metadata.eventDate)){
 			mdFileList.push({
 				url,
 				...converted

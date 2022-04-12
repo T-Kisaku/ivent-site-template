@@ -6,6 +6,7 @@ export interface Ivent {
 		schedule: {[time: string]: string}
 		place: string
 		price: string
+		imageURL: string
 	}
 	content: string
 }

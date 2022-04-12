@@ -1,11 +1,9 @@
 <script context="module" lang="ts">
-	import dayjs from 'dayjs';
 	import type { Load } from '@sveltejs/kit';
 	import type {Ivent} from '@/src/types/ivent'
 
 
-	export const load: Load = async ({ fetch, params, url}) => {
-		
+	export const load: Load = async ({ fetch, url}) => {
 		const
             response = await fetch('/api/ivents.json'),
             data: Ivent[] = await response.json(),
@@ -18,12 +16,11 @@
 		}
 	};
 </script>
-
 <script lang="ts">
-	// import HistoryList from '@/src/components/organizations/HistoryList.svelte';
-
-	// export let data: Ivent[];
-	export let ivent: Ivent
+	export let ivent: Ivent | null
 </script>
+<img src="{ivent.metadata.imageURL}" alt="{ivent.metadata.title}" class="h-1/2 mx-auto rounded-md">
+<div class="mx-20 mt-20 p-7 bg-white rounded-md">
+	{@html ivent.content}
+</div>
 
-{ivent.content}
