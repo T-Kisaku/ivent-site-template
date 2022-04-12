@@ -11,17 +11,15 @@ import { convertMd } from '@/src/lib/markdown'
 
 // ivents.json
 export const get: RequestHandler = async ({ params }) => {
-	const mdFileObj = import.meta.globEager('../../../__data/ivent/*.md'),
+	const mdFileObj = import.meta.globEager('../../../static/ivent/*.md'),
 		mdFileList: Ivent[] = []
 
 	const yesterday = new Date((new Date()).valueOf() - 1000*60*60*24);
 
-	console.log(yesterday)
-
 	for (const filePath of Object.keys(mdFileObj)) {
 		const
 			rawMd = mdFileObj[filePath].default,
-			// Convert ../../../__data/ivent/*.md to /ivent/*
+			// Convert ../../../static/ivent/*.md to /ivent/*
 			url = filePath.slice(15, -3),
 			converted = await convertMd(rawMd)
 

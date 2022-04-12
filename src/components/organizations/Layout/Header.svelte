@@ -1,8 +1,7 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import Button from '@/src/components/atoms/Button.svelte';
-	
-	export let config
+	import config from '$lib/config.json'
 
 	const gotoContact = () => {
 		if(window){
