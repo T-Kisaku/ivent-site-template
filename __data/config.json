@@ -46,10 +46,27 @@
         ],
         "supporters": [
             {
-                "name": "",
+                "name": "Test",
+                "image_URL": "/image/test.JPG",
                 "contact": {
-                    "instagram": "",
-                    "twitter": ""
+                    "instagram": "Test",
+                    "twitter": "Test"
+                }
+            },
+            {
+                "name": "Test",
+                "image_URL": "/image/test.JPG",
+                "contact": {
+                    "instagram": "Test",
+                    "twitter": "Test"
+                }
+            },
+            {
+                "name": "Test",
+                "image_URL": "/image/test.JPG",
+                "contact": {
+                    "instagram": "Test",
+                    "twitter": "Test"
                 }
             }
         ]

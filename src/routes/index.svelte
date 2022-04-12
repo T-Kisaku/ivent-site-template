@@ -21,10 +21,13 @@ export const load: Load = async ({ fetch, params }) => {
     import { goto } from '$app/navigation';
 
     import {Swiper, SwiperSlide} from 'swiper/svelte'
-    import { Autoplay, Pagination,  Navigation, A11y} from 'swiper';
-    import 'swiper/css';
-    import 'swiper/css/navigation';
-    import 'swiper/css/pagination';
+    import { EffectCoverflow, Pagination } from "swiper";
+
+    import "swiper/css";
+    import "swiper/css/effect-coverflow";
+    import "swiper/css/pagination";
+    import "@/src/styles/slide.coverflow.css"
+
 
     import IventCard from '@/src/components/atoms/IventCard.svelte';
     import Title from '../components/atoms/Title.svelte';
@@ -33,36 +36,41 @@ export const load: Load = async ({ fetch, params }) => {
 	export let data: Ivent[];
 </script>
 
-
 <MetaTags title="Home"/>
 
 <Swiper
-    modules={[Autoplay, Pagination, Navigation, A11y]}
-    spaceBetween={50}
-    slidesPerView={1}
-    navigation
-    pagination={{ clickable: true }}
-    scrollbar={{ draggable: true }}
-    on:slideChange={() => console.log('slide change')}
-    on:swiper={(e) => console.log(e.detail[0])}
+  effect={"coverflow"}
+  grabCursor={true}
+  loop={true}
+  centeredSlides={true}
+  slidesPerView={"auto"}
+  coverflowEffect={{
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  }}
+  pagination={true}
+  modules={[EffectCoverflow, Pagination]}
+  class="mySwiper"
 >
-    {#each data as ivent}
+  {#each data as ivent}
         <SwiperSlide>
             <img
                 src="{ivent.metadata.imageURL}"
                 alt="{ivent.metadata.title}"
-                class="w-96 mx-auto mb-10"
                 on:click={() => goto(ivent.url)}
             >
         </SwiperSlide>
-    {/each}
+{/each}
 </Swiper>
 
-<div class="mx-20 h-96">
+<div class="mx-20">
     <Title>IVENT</Title>
-    <div class="flex gap-7">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
         {#each data as ivent}
-        <IventCard ivent={ivent} />
+            <IventCard ivent={ivent} />
         {/each}
     </div>
 </div>

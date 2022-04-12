@@ -3,7 +3,7 @@ module.exports = {
 	theme: {
 		extend: {
 			spacing: {
-				'header-height': '70px',
+				'header-height': '105px',
 				'footer-height': '200px',
 			}
 		}

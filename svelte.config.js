@@ -4,6 +4,7 @@
  */
 
 import vercel from '@sveltejs/adapter-vercel';
+import staticAdapter from '@sveltejs/adapter-static'
 import viteRawPlugin from 'vite-raw-plugin'
 import { svelteSVG } from 'rollup-plugin-svelte-svg'
 
@@ -19,7 +20,8 @@ const config = {
 	preprocess: [preprocess()],
 
 	kit: {
-		adapter: vercel(),
+		// adapter: vercel(),
+		adapter: staticAdapter(),
 		files: {
 			assets: '__data',
 		},
