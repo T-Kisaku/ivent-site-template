@@ -1,7 +1,7 @@
 <script context="module" lang="ts">
 	import type { Load } from '@sveltejs/kit';
 
-    export const load: Load = async ({ fetch, params }) => {
+    export const load: Load = async ({ fetch }) => {
 		const
             response = await fetch('/api/config.json'),
             config = await response.json()

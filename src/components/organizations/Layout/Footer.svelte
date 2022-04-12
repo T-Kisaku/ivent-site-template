@@ -1,6 +1,7 @@
 <script lang="ts">
-    import config from '@/__data/config.json'
     import Button from '@/src/components/atoms/Button.svelte';
+
+	export let config
 
     const gotoContact = () => {
 		if(window){

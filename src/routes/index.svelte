@@ -2,7 +2,7 @@
 	import type { Load } from '@sveltejs/kit';
 	import type {Ivent} from '@/src/types/ivent'
 
-export const load: Load = async ({ fetch, params }) => {
+export const load: Load = async ({ fetch }) => {
 		const
             response = await fetch('/api/ivents.json'),
             data: Ivent[] = await response.json()
