@@ -22,26 +22,22 @@
 	"devDependencies": {
 		"@popperjs/core": "^2.11.4",
 		"@sveltejs/adapter-auto": "next",
-		"@sveltejs/adapter-netlify": "^1.0.0-next.51",
+		"@sveltejs/adapter-static": "^1.0.0-next.29",
+		"@sveltejs/adapter-vercel": "^1.0.0-next.46",
 		"@sveltejs/kit": "next",
 		"@types/three": "^0.138.0",
 		"@typescript-eslint/eslint-plugin": "^5.10.1",
 		"@typescript-eslint/parser": "^5.10.1",
 		"autoprefixer": "^10.4.2",
-		"dayjs": "^1.11.0",
 		"eslint": "^7.32.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-svelte3": "^3.2.1",
-		"front-matter": "^4.0.2",
 		"husky": "^7.0.4",
+		"mdsvex": "^0.10.5",
 		"node-sass": "^7.0.1",
 		"postcss": "^8.4.8",
 		"prettier": "^2.5.1",
 		"prettier-plugin-svelte": "^2.5.0",
-		"rehype-stringify": "^9.0.3",
-		"remark-gfm": "^3.0.1",
-		"remark-parse": "^10.0.1",
-		"remark-rehype": "^10.1.0",
 		"rollup-plugin-svelte-svg": "^1.0.0-beta.6",
 		"svelte": "^3.44.0",
 		"svelte-check": "^2.2.6",
@@ -51,9 +47,16 @@
 		"tailwindcss": "^3.0.23",
 		"tslib": "^2.3.1",
 		"typescript": "~4.6.2",
-		"unified": "^10.1.2",
-		"vite-raw-plugin": "^1.0.1",
-		"yaml": "^2.0.0"
+		"vite-plugin-string": "^1.1.2"
 	},
-	"dependencies": {}
+	"dependencies": {
+		"@seregpie/three.text-sprite": "^3.2.0",
+		"dayjs": "^1.10.8",
+		"github-markdown-css": "^5.1.0",
+		"rehype-autolink-headings": "^6.1.1",
+		"rehype-external-links": "^1.0.1",
+		"rehype-slug": "^5.0.1",
+		"remark-abbr": "^1.4.1",
+		"remark-github": "^11.2.2"
+	}
 }

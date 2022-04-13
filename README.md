@@ -1,30 +1,40 @@
-# Ivent site template
+# create-svelte
 
-[English]()
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
-## このリポジトリの目的
+## Creating a project
 
-## 使い方
-1. Node.jsのインストール
-2. このプロジェクトの起動
-3. 設定ファイルの変更
-4. 会社情報等のカスタマイズ
+If you're seeing this, you've probably already done this step. Congrats!
 
-# 1. Node.jsのインストール
-# 2. このプロジェクトの起動
-# 3. 設定ファイルの変更や記事の更新
-このレポジトリには[__data](/__data/)というフォルダーにまとめてあります。
-主に
-|ファイルまたはフォルダ|役割|
----|----
-|ivents|このフォルダはイベントの情報をmarkdown形式で記述してく用のフォルダーです。|
-|config.json|このファイルは会社情報など設定を記述するためのファイルです。|
+```bash
+# create a new project in the current directory
+npm init svelte@next
 
-# 4. 会社情報棟のカスタマイズ
+# create a new project in my-app
+npm init svelte@next my-app
+```
 
-# このサイトの技術要素
-このサイトはSvelteKitをベースに作られています。
+> Note: the `@next` is temporary
 
-なのでHTMLやCSSをかける方ならばある程度カスタマイズできるようになっています。
+## Developing
 
-# このレポジトリを使ったプロジェクト
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+
+```bash
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
+## Building
+
+To create a production version of your app:
+
+```bash
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.

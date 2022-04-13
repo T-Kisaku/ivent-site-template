@@ -35,6 +35,8 @@ export const load: Load = async ({ fetch }) => {
 
 
 	export let data: Ivent[];
+
+    console.log(data)
 </script>
 
 <MetaTags title="Home"/>

@@ -3,8 +3,10 @@
  * https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog#:~:text=and%20modify%20the%20code%20like%20so
  */
 
-import netlify from '@sveltejs/adapter-netlify'
-import viteRawPlugin from 'vite-raw-plugin'
+import mdsvexConfig from './mdsvex.config.js';
+import { mdsvex } from 'mdsvex';
+import vercel from '@sveltejs/adapter-vercel';
+import vitePluginString from 'vite-plugin-string';
 import { svelteSVG } from 'rollup-plugin-svelte-svg'
 
 import preprocess from 'svelte-preprocess';
@@ -13,17 +15,18 @@ import path from 'path';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
+	extensions: ['.svelte', ...mdsvexConfig.extensions],
 
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
-	preprocess: [preprocess()],
+	preprocess: [mdsvex(mdsvexConfig), preprocess()],
 
 	kit: {
-		adapter: netlify(),
+		adapter: vercel(),
 		vite: {
 			plugins: [
 				// If you execute without default, it occure error
-				viteRawPlugin({ fileRegex: /\.md$/ }),
+				vitePluginString.default(),
 				svelteSVG({
 					// optional SVGO options
 					// pass empty object to enable defaults
@@ -42,7 +45,7 @@ const config = {
 			},
 			optimizeDeps: {
 				entries: []
-			},
+			}
 		}
 	}
 };
