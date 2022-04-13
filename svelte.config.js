@@ -5,7 +5,8 @@
 
 import mdsvexConfig from './mdsvex.config.js';
 import { mdsvex } from 'mdsvex';
-import vercel from '@sveltejs/adapter-vercel';
+// import vercel from '@sveltejs/adapter-vercel';
+import netlify from '@sveltejs/adapter-netlify'
 import vitePluginString from 'vite-plugin-string';
 import { svelteSVG } from 'rollup-plugin-svelte-svg'
 
@@ -22,7 +23,7 @@ const config = {
 	preprocess: [mdsvex(mdsvexConfig), preprocess()],
 
 	kit: {
-		adapter: vercel(),
+		adapter: netlify(),
 		vite: {
 			plugins: [
 				// If you execute without default, it occure error
