@@ -1,6 +1,6 @@
 <script context="module" lang="ts">
 	import type { Load } from '@sveltejs/kit';
-	import type {Ivent} from '@/src/types/ivent'
+	import type {Ivent} from '@/src/types/markdown'
 
 export const load: Load = async ({ fetch }) => {
 		const

@@ -1,5 +1,5 @@
 <script lang="ts">
-import type { Ivent } from "@/src/types/ivent";
+import type { Ivent } from "@/src/types/markdown";
 import { goto } from "$app/navigation";
 import dayjs from "dayjs";
 
