@@ -16,8 +16,10 @@
 	];
 </script>
 
-<header class="flex w-full h-header-heigh py-5 px-28 shadow-md bg-white">
-	<div class="flex-grow" on:click={() => goto('/')}>{config.project.name}</div>
+<header class="flex items-center w-full h-header-heigh py-5 px-28 shadow-md bg-white">
+	<div class="flex-grow text-xl font-medium" on:click={() => goto('/')}>
+		{config.project.name}
+	</div>
 	<div class="flex space-x-5 hidden md:inline-block">
 		{#each routeList as route}
 			<Button

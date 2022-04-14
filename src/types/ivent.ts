@@ -3,10 +3,10 @@ export interface Ivent {
 	metadata: {
 		title: string
 		eventDate: Date
-		schedule: {[time: string]: string}
+		schedule: { [time: string]: string }
 		place: string
 		price: string
 		imageURL: string
+		ticketURL: string
 	}
-	content: string
 }
