@@ -1,18 +1,18 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import Button from '@/src/components/atoms/Button.svelte';
-	import config from '$lib/config.json'
+	import config from '$lib/config.json';
 
 	const gotoContact = () => {
-		if(window){
-			window.open(config.company.contact_form_URL, '_blank')
+		if (window) {
+			window.open(config.company.contact_form_URL, '_blank');
 		}
-	}
+	};
 
 	const routeList = [
 		{ title: '会社概要', path: '/about/company' },
 		{ title: 'メンバー', path: '/about/members' },
-		{ title: 'お問い合わせ', onClick:  gotoContact}
+		{ title: 'お問い合わせ', onClick: gotoContact }
 	];
 </script>
 
@@ -24,10 +24,10 @@
 		{#each routeList as route}
 			<Button
 				on:click={() => {
-					if(route.onClick){
-						return route.onClick()
+					if (route.onClick) {
+						return route.onClick();
 					}
-					return goto(route.path)
+					return goto(route.path);
 				}}
 			>
 				{route.title}

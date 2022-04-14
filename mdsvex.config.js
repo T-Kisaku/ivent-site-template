@@ -4,7 +4,7 @@ import remarkGithub from 'remark-github';
 import remarkAbbr from 'remark-abbr';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-import rehypeExternalLinks from 'rehype-external-links'
+import rehypeExternalLinks from 'rehype-external-links';
 
 export default defineConfig({
 	extensions: ['.md', '.svx'],
@@ -27,6 +27,6 @@ export default defineConfig({
 				behavior: 'wrap'
 			}
 		],
-		rehypeExternalLinks,
+		rehypeExternalLinks
 	]
 });

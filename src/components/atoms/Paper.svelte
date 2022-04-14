@@ -1,13 +1,9 @@
 <script lang="ts">
-    import { createEventDispatcher } from 'svelte'
+	import { createEventDispatcher } from 'svelte';
 
-    const dispatch = createEventDispatcher()
+	const dispatch = createEventDispatcher();
 </script>
 
-<div
-    {...$$props}
-    class="bg-white rounded-md {$$props.class}"
-    on:click={() => dispatch('click')}
->
-    <slot></slot>
+<div {...$$props} class="bg-white rounded-md {$$props.class}" on:click={() => dispatch('click')}>
+	<slot />
 </div>

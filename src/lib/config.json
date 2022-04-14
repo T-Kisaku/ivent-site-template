@@ -1,74 +1,74 @@
 {
-    "company": {
-        "name": "Happy machine",
-        "representative": "なかやまきんに君",
-        "establish_date": "2021年2月18日",
-        "place": "新宿区2-5-9 〇〇ビル",
-        "contact_email": "test@gmail.com",
-        "contact_form_URL": "/"
-    },
-    "project": {
-        "name": "Tech爺",
-        "members": [
-            {
-                "name": "なかやまきんに君",
-                "job": "CEO",
-                "image_URL": "/image/test.JPG",
-                "age": "",
-                "comment": "だ～いすき",
-                "contact": {
-                    "instagram": "",
-                    "twitter": ""
-                }
-            },
-            {
-                "name": "なかやまきんに君",
-                "job": "CEO",
-                "image_URL": "/image/test.JPG",
-                "age": "",
-                "comment": "だ～いすき",
-                "contact": {
-                    "instagram": "",
-                    "twitter": ""
-                }
-            },
-            {
-                "name": "なかやまきんに君",
-                "job": "CEO",
-                "image_URL": "/image/test.JPG",
-                "age": "",
-                "comment": "だ～いすき",
-                "contact": {
-                    "instagram": "",
-                    "twitter": ""
-                }
-            }
-        ],
-        "supporters": [
-            {
-                "name": "Test",
-                "image_URL": "/image/test.JPG",
-                "contact": {
-                    "instagram": "Test",
-                    "twitter": "Test"
-                }
-            },
-            {
-                "name": "Test",
-                "image_URL": "/image/test.JPG",
-                "contact": {
-                    "instagram": "Test",
-                    "twitter": "Test"
-                }
-            },
-            {
-                "name": "Test",
-                "image_URL": "/image/test.JPG",
-                "contact": {
-                    "instagram": "Test",
-                    "twitter": "Test"
-                }
-            }
-        ]
-    }
+	"company": {
+		"name": "Happy machine",
+		"representative": "なかやまきんに君",
+		"establish_date": "2021年2月18日",
+		"place": "新宿区2-5-9 〇〇ビル",
+		"contact_email": "test@gmail.com",
+		"contact_form_URL": "/"
+	},
+	"project": {
+		"name": "Tech爺",
+		"members": [
+			{
+				"name": "なかやまきんに君",
+				"job": "CEO",
+				"image_URL": "/image/test.JPG",
+				"age": "",
+				"comment": "だ～いすき",
+				"contact": {
+					"instagram": "",
+					"twitter": ""
+				}
+			},
+			{
+				"name": "なかやまきんに君",
+				"job": "CEO",
+				"image_URL": "/image/test.JPG",
+				"age": "",
+				"comment": "だ～いすき",
+				"contact": {
+					"instagram": "",
+					"twitter": ""
+				}
+			},
+			{
+				"name": "なかやまきんに君",
+				"job": "CEO",
+				"image_URL": "/image/test.JPG",
+				"age": "",
+				"comment": "だ～いすき",
+				"contact": {
+					"instagram": "",
+					"twitter": ""
+				}
+			}
+		],
+		"supporters": [
+			{
+				"name": "Test",
+				"image_URL": "/image/test.JPG",
+				"contact": {
+					"instagram": "Test",
+					"twitter": "Test"
+				}
+			},
+			{
+				"name": "Test",
+				"image_URL": "/image/test.JPG",
+				"contact": {
+					"instagram": "Test",
+					"twitter": "Test"
+				}
+			},
+			{
+				"name": "Test",
+				"image_URL": "/image/test.JPG",
+				"contact": {
+					"instagram": "Test",
+					"twitter": "Test"
+				}
+			}
+		]
+	}
 }

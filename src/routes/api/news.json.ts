@@ -1,4 +1,4 @@
-import type { News } from "@/src/types/markdown";
+import type { News } from '@/src/types/markdown';
 // news.json
 export const get = async () => {
 	const allNewsFiles = import.meta.globEager('../news/**/*.md');

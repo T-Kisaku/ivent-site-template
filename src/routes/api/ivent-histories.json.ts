@@ -3,7 +3,7 @@
  * Diffirence is comparing tommorw and eventData
  */
 
-import type { Ivent } from "@/src/types/markdown";
+import type { Ivent } from '@/src/types/markdown';
 
 // history.json
 export const get = async () => {
@@ -17,8 +17,8 @@ export const get = async () => {
 		};
 	});
 
-	const tommorow = new Date(new Date().getTime() + 24*60*60*1000);
+	const tommorow = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
 	return {
-		body: ivents.filter(ivent => new Date(ivent.metadata.eventDate) < tommorow )
+		body: ivents.filter((ivent) => new Date(ivent.metadata.eventDate) < tommorow)
 	};
 };

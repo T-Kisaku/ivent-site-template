@@ -3,12 +3,8 @@
 	import { MetaTags } from 'svelte-meta-tags';
 	import '@/src/styles/app.css';
 
-	import config from '$lib/config.json'
-
+	import config from '$lib/config.json';
 </script>
 
-<MetaTags
-	title="Page"
-	titleTemplate="%s | {config.project.name}"
-/>
-<Layout><slot/></Layout>
+<MetaTags title="Page" titleTemplate="%s | {config.project.name}" />
+<Layout><slot /></Layout>

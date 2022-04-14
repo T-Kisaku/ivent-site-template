@@ -6,9 +6,9 @@
 import mdsvexConfig from './mdsvex.config.js';
 import { mdsvex } from 'mdsvex';
 // import vercel from '@sveltejs/adapter-vercel';
-import netlify from '@sveltejs/adapter-netlify'
+import netlify from '@sveltejs/adapter-netlify';
 import vitePluginString from 'vite-plugin-string';
-import { svelteSVG } from 'rollup-plugin-svelte-svg'
+import { svelteSVG } from 'rollup-plugin-svelte-svg';
 
 import preprocess from 'svelte-preprocess';
 
@@ -35,13 +35,13 @@ const config = {
 					// vite-specific
 					// https://vitejs.dev/guide/api-plugin.html#plugin-ordering
 					// enforce: 'pre' | 'post'
-					enforce: "pre",
-				}),
+					enforce: 'pre'
+				})
 			],
 			resolve: {
 				alias: {
 					// these are the aliases and paths to them
-					'@': path.resolve('.'),
+					'@': path.resolve('.')
 				}
 			},
 			optimizeDeps: {
