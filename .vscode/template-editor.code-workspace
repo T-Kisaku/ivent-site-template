@@ -1,0 +1,19 @@
+{
+    "folders": [
+        {
+            "path": "../markdown-template/"
+        },
+        {
+            "path": "../src/routes/ivent/"
+        },
+        {
+            "path": "../src/routes/news/"
+        },
+        {
+            "path": "../src/lib/config.json"
+        },
+        {
+            "path": "../src/routes/about/company.svelte"
+        }
+    ]
+}
