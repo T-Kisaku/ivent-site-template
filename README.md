@@ -51,11 +51,11 @@ WordpressやMicorCMSなどデータベースを使用せずファイルシステ
 
 そしてそのリポジトリをご自身のパソコンにクローンしてテキストエディターで開いてください。
 
-<span style="color:red;">もしあなたがVSCodeをお使いでしたら</span>
+**もしあなたがVSCodeをお使いでしたら**
 レポジトリ内の[.vscode/template-editor.code-workspace](.vscode/template-editor.code-workspace)をワークスペースとして開くと楽に編集できます！！
 
 またローカル環境でブログシステムを確認したい場合はルートディレクトリで下記のコマンドを実行して[https://localhost:3000](https://localhost:3000)を開いてください。
-（<span style="color:red;">Node.jsがセットアップされていない場合実行できません</span>）
+（ **Node.jsがセットアップされていない場合実行できません** ）
 ```bash
 yarn dev
 ```
@@ -95,7 +95,7 @@ yarn dev
 [src/routes/news/](src/routes/news/)の内に`好きな文字（意味のある文字法が好ましい）.md`のようにmdファイルを作成し
 [markdown-template/news.md](markdown-template/news.md)の内容をコピペして編集してください。
 
-<span style="color:red;">src/routes/ivent/やsrc/routes/news/はsrc/routes/ivent/2021/hi.mdやsrc/routes/news/custom/test.mdなどフォルダないよのmdファイルにも対応しています。</span>
+**src/routes/ivent/やsrc/routes/news/はsrc/routes/ivent/2021/hi.mdやsrc/routes/news/custom/test.mdなどフォルダないよのmdファイルにも対応しています。**
 
 ### デプロイ方法
 デフォルトで[Netlify](https://www.netlify.com/)へのデプロイをサポートしています。
